@@ -1,214 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <title>restaur</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Card UI</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
-<div id="main">
 
-    <!-- <div id="navbar">
-            <div id="logo"></div>
-            <div id="nav-items">
-                
-            </div>
-    </div> -->
-   
-    <div id="cards-box">
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Gluten-Free Bread</h3></div>
-                <div class="price"><h4>Price: ₹150</h4></div>
-                <span><p>Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Gammon Joint</h3></div>
-                <div class="price"><h4>Price: ₹400</h4></div>
-                <span><p>Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Three-Bean Chilli">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Vegan Three-Bean Chilli</h3></div>
-                <div class="price"><h4>Price: ₹250</h4></div>
-                <span><p>Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-sweet-potato-and-spinach-dal-5L-recipe-header-260x340.jpg" alt="Sweet Potato and Spinach Dal">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Sweet Potato & Spinach Dal</h3></div>
-                <div class="price"><h4>Price: ₹300</h4></div>
-                <span><p>Rich and creamy dal with sweet potato and spinach, a perfect comforting meal.</p></span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-roasted-red-pepper-and-tomato-soup-3L-recipe-header-260x340.jpg" alt="Roasted Red Pepper Soup">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Roasted Red Pepper Soup</h3></div>
-                <div class="price"><h4>Price: ₹200</h4></div>
-                <span><p>Delicious roasted red pepper and tomato soup, perfect for a cozy evening.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/2019/08/soup-chef-wild-nettle-soup-260x340.jpg" alt="Wild Nettle Soup">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Wild Nettle Soup</h3></div>
-                <div class="price"><h4>Price: ₹180</h4></div>
-                <span><p>Unique wild nettle soup, packed with nutrients and earthy flavors.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-perfect-pulled-pork-5L-recipe-header-260x340.jpg" alt="Pulled Pork">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Perfect Pulled Pork</h3></div>
-                <div class="price"><h4>Price: ₹450</h4></div>
-                <span><p>Succulent pulled pork with smoky flavors, great for burgers or sandwiches.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://drewandcole.com/wp-content/uploads/2019/05/drew-and-cole-pressure-king-pro-vegan-red-thai-curry-5L-recipe-menu-1-260x340.jpg" alt="Vegan Red Thai Curry">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Vegan Red Thai Curry</h3></div>
-                <div class="price"><h4>Price: ₹350</h4></div>
-                <span><p>Rich and creamy vegan red Thai curry made with authentic spices and herbs.</p></span>
-            </div>
-        </div>
-    
-        <div class="card">
-            <img src="https://i.pinimg.com/474x/43/fa/bd/43fabd3cf07158f21efe72088a42747d.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 1</h3></div>
-                <div class="price"><h4>Price: ₹200</h4></div>
-                <span><p>A flavorful and aromatic dish, perfect for any occasion.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/474x/32/3d/ee/323dee28eb6a34671b2dbda556dc4455.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 2</h3></div>
-                <div class="price"><h4>Price: ₹250</h4></div>
-                <span><p>Delicious and wholesome, made with fresh and quality ingredients.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/474x/c5/e1/cf/c5e1cf8dbc34394e0e5912aac7128104.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 3</h3></div>
-                <div class="price"><h4>Price: ₹180</h4></div>
-                <span><p>A perfect choice for a quick and satisfying meal.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/736x/04/67/ec/0467ec730ac2f7eeb07593c5e5c19e75.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 4</h3></div>
-                <div class="price"><h4>Price: ₹220</h4></div>
-                <span><p>A delightful treat with a burst of flavors in every bite.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/236x/e9/bd/1d/e9bd1d72950e3aa98445c15c4bcb74e9.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 5</h3></div>
-                <div class="price"><h4>Price: ₹300</h4></div>
-                <span><p>A rich and hearty dish that satisfies your cravings.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/236x/f4/d5/35/f4d535a76f86f7c909f15cf0457ccbf2.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 6</h3></div>
-                <div class="price"><h4>Price: ₹270</h4></div>
-                <span><p>A savory delight crafted to perfection for food enthusiasts.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/236x/f4/d5/35/f4d535a76f86f7c909f15cf0457ccbf2.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 7</h3></div>
-                <div class="price"><h4>Price: ₹270</h4></div>
-                <span><p>A savory delight crafted to perfection for food enthusiasts.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/236x/a4/a2/04/a4a2042d3c42ba82478970e55a17d40c.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 8</h3></div>
-                <div class="price"><h4>Price: ₹260</h4></div>
-                <span><p>An appetizing dish that brings joy to your taste buds.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/236x/12/56/37/125637335754342fa5addfd6a101002f.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 9</h3></div>
-                <div class="price"><h4>Price: ₹280</h4></div>
-                <span><p>A delicious fusion of flavors perfect for any time of the day.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/236x/b0/37/cf/b037cf4b84a9f217b5576d07d4011f6a.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 10</h3></div>
-                <div class="price"><h4>Price: ₹320</h4></div>
-                <span><p>An exquisite dish prepared to satisfy gourmet desires.</p></span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.pinimg.com/236x/2b/64/e1/2b64e15ac11687bb3074b9f7abc87edd.jpg" alt="Dish Image">
-            <div class="card-content">
-                <div class="cc-h3"><h3>Dish Name 11</h3></div>
-                <div class="price"><h4>Price: ₹350</h4></div>
-                <span><p>A delightful dish to savor, made with love and care.</p></span>
-            </div>
-        </div>
+
+
+<div id="cards-box">
+
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
     </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-sweet-potato-and-spinach-dal-5L-recipe-header-260x340.jpg" alt="Sweet Potato & Spinach Dal" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Sweet Potato & Spinach Dal</h2>
+      <p class="food-price">₹300</p>
+      <p class="food-description">Rich and creamy dal with sweet potato and spinach, a perfect comforting meal.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  <div class="food-card">
+    <!-- Placeholder Image -->
+    <img src="https://drewandcole.com/wp-content/uploads/1998/05/gluten-free-bread-260x340.jpg" alt="Gluten-Free Bread" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gluten-Free Bread</h2>
+      <p class="food-price">₹150</p>
+      <p class="food-description">Soft and delicious gluten-free bread, perfect for sandwiches or toast.</p>
+  
+      <!-- Details and Summary -->
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-gammon-joint-5L-recipe-header-260x340.jpg" alt="Gammon Joint" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Gammon Joint</h2>
+      <p class="food-price">₹400</p>
+      <p class="food-description">Perfectly tender gammon joint, ideal for a hearty and satisfying dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-vegan-three-bean-chilli-5L-recipe-header-260x340.jpg" alt="Vegan Three-Bean Chilli" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Vegan Three-Bean Chilli</h2>
+      <p class="food-price">₹250</p>
+      <p class="food-description">Healthy vegan chilli packed with three beans and spices, perfect for dinner.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
+  
+  <div class="food-card">
+    <img src="https://drewandcole.com/wp-content/uploads/2019/04/drew-and-cole-pressure-king-pro-sweet-potato-and-spinach-dal-5L-recipe-header-260x340.jpg" alt="Sweet Potato & Spinach Dal" class="food-image">
+  
+    <div class="food-info">
+      <h2 class="food-name">Sweet Potato & Spinach Dal</h2>
+      <p class="food-price">₹300</p>
+      <p class="food-description">Rich and creamy dal with sweet potato and spinach, a perfect comforting meal.</p>
+  
+      <details>
+        <summary>More Information</summary>
+        <p class="additional-info">Calories: Not provided</p>
+        <p class="additional-info">Ingredients: Not specified</p>
+        <p class="additional-info">Preparation Time: Not mentioned</p>
+      </details>
+    </div>
+  </div>
     
-<h1>hiii</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
+  <script src="script.js">
+  
+  </script>
 </body>
+
 </html>

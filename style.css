@@ -9,7 +9,7 @@
     src: url('../Restaur/fonts/Speedee-Bold.woff2') format('truetype');
 }
 
-/* Reset and Global Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -17,145 +17,197 @@
 }
 
 body, html {
-    background-color: white;
-    height: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
     width: 100%;
-    color: black;
+    padding: 1.25rem; /* 20px */
 }
 
-/* Card Container */
+/* Cards Box Layout */
 #cards-box {
-    width: 90%;
+    width: 100%;
     margin: 5rem auto;
     display: grid;
-    grid-template-rows: repeat(5, 600px); /* Default for larger screens */
-    grid-template-columns: repeat(4, 325px); /* Default for larger screens */
+    grid-template-columns: repeat(4, 20.3125rem); /* 325px */
+    grid-template-rows: auto;
     justify-content: center;
-    gap: 20px;
+    gap: 2rem;
     justify-items: center;
     align-items: center;
 }
 
-/* Individual Card */
-.card {
-    height: 32vw;
-    width: 19rem;
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 10px 10px 60px #abb8c37a;
-    text-align: left;
-    transition: box-shadow 0.3s ease-in-out;
+/* Food Card Styling */
+.food-card {
+    width: 21.25rem; /* 340px */
+    border-radius: 1.25rem; /* 20px */
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
 }
 
-.card:hover {
-    box-shadow: 10px 10px 60px #abb8c3;
+.food-card:hover {
+    transform: translateY(-0.5rem); /* -8px */
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+    background-color: #eaf7ff;
 }
 
-.card img {
-    height: 22vw;
-    width: 18rem;
-    border-radius: 16px;
+/* Food Image */
+.food-image {
+    width: 100%;
+    height: 13.75rem; /* 220px */
     object-fit: cover;
+    padding: 0.3125rem; /* 5px */
+    border-radius: 1.25rem; /* 20px */
 }
 
-.card-content {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2rem;
-    font-size: 1.2rem;
-    align-items: flex-start;
+.food-image:hover {
+    opacity: 0.8;
 }
 
-.cc-h3 {
-    width: 100%;
-    padding-top: 1.2rem;
-    font-size: 1.3rem;
+/* Food Info Section */
+.food-info {
+    padding: 1.25rem; /* 20px */
+}
+
+.food-name {
+    font-size: 1.4375rem; /* 23px */
+    margin-bottom: 0.625rem; /* 10px */
     color: #ff6900;
     font-family: Spee-Bold;
+    transition: color 0.3s ease;
 }
 
-.price {
-    width: 100%;
-    padding-top: 0.5rem;
-    color: #cf2e2e;
-    font-size: 1.1rem;
-    padding-bottom: 1rem;
+.food-price {
+    font-size: 1.125rem; /* 18px */
+    color: #ff6900;
+    font-family: Spee-Bold;
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.food-description {
+    font-size: 0.9375rem; /* 15px */
+    color: #fcb900;
+    font-family: Spee-Reg;
+    line-height: 1.6;
+}
+
+/* Detail and Summary Styling */
+details {
+    margin-top: 0.9375rem; /* 15px */
+    background-color: #f3f4f7;
+    padding: 0.625rem; /* 10px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+}
+
+summary {
+    font-size: 1rem; /* 16px */
+    font-weight: 700;
+    color: #00d084d2;
+    text-decoration: none;
+    cursor: pointer;
     font-family: Spee-Bold;
 }
 
-.card-content span {
-    width: 100%;
-    color: #fcb900;
-    font-size: 0.9rem;
-    font-family: Spee-Reg;
-    font-weight: 800;
+details[open] summary {
+    color: #27ae60;
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
+.additional-info {
+    font-size: 0.9rem; /* 14px */
+    color: #ff6900;
+    margin-top: 0.625rem; /* 10px */
+    font-weight: bold;
+    font-family: Spee-Reg;
+}
+
+/* Responsive Design */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
     #cards-box {
         grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-        grid-template-rows: auto;
     }
 
-    .card {
-        height: 28vw;
-        width: 18rem;
+    .food-card {
+        width: 90%;
     }
 
-    .card img {
-        height: 20vw;
+    .food-image {
+        height: 12.5rem; /* 200px */
     }
 }
 
-@media (max-width: 992px) {
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
     #cards-box {
         grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
     }
 
-    .card {
-        height: 26vw;
-        width: 16rem;
+    .food-card {
+        width: 90%;
     }
 
-    .card img {
-        height: 18vw;
+    .food-image {
+        height: 11.25rem; /* 180px */
+    }
+
+    .food-name {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .food-price {
+        font-size: 1rem; /* 16px */
+    }
+
+    .food-description {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    details summary {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .additional-info {
+        font-size: 0.75rem; /* 12px */
     }
 }
 
-@media (max-width: 768px) {
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
     #cards-box {
         grid-template-columns: 1fr; /* 1 card per row */
     }
 
-    .card {
-        height: auto;
-        width: 90%;
-    }
-
-    .card img {
-        height: auto;
+    .food-card {
         width: 100%;
     }
-}
 
-@media (max-width: 576px) {
-    .cc-h3 {
-        font-size: 1rem;
+    .food-image {
+        height: 10rem; /* 160px */
     }
 
-    .price {
-        font-size: 0.9rem;
+    .food-name {
+        font-size: 1.125rem; /* 18px */
     }
 
-    .card-content span {
-        font-size: 0.8rem;
+    .food-price {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .food-description {
+        font-size: 0.75rem; /* 12px */
+    }
+
+    details summary {
+        font-size: 0.75rem; /* 12px */
+    }
+
+    .additional-info {
+        font-size: 0.625rem; /* 10px */
     }
 }

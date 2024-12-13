@@ -1,143 +1,161 @@
-/* Import Roboto font */
+/* Import Custom Fonts */
 @font-face {
-    font-family: 'Spee-Reg'; /* Custom font name */
-    src: url('../Restaur/fonts/Speedee-Regular.woff2') format('truetype'); /* Adjust path as needed */
-    
+    font-family: 'Spee-Reg';
+    src: url('../Restaur/fonts/Speedee-Regular.woff2') format('truetype');
 }
 
-/* Import Roboto font */
 @font-face {
-    font-family: 'Spee-Bold'; /* Custom font name */
-    src: url('../Restaur/fonts/Speedee-Bold.woff2') format('truetype'); /* Adjust path as needed */
-    
+    font-family: 'Spee-Bold';
+    src: url('../Restaur/fonts/Speedee-Bold.woff2') format('truetype');
 }
 
-
-
-
-
-
-*{
+/* Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
-body,html{
+body, html {
     background-color: white;
     height: 100%;
     width: 100%;
     color: black;
-    
 }
-/* 
-#navbar{
-    height: 5rem;
-    display: flex;
-    width: 100%;
-    background-color: #fcb900;
-    position:absolute;
-    align-items: center;
-}
-#nav-items{
-    font-size: 1.5rem;
-    display: flex;
-    padding: 2rem;
-    position: relative;
-    justify-content: space-between;
-    left:55rem;
-    align-items: center;
 
-} */
-
-
-
+/* Card Container */
 #cards-box {
     width: 90%;
     margin: 5rem auto;
     display: grid;
-    grid-template-rows: repeat(5, 600px);
-    grid-template-columns: repeat(4, 325px);
+    grid-template-rows: repeat(5, 600px); /* Default for larger screens */
+    grid-template-columns: repeat(4, 325px); /* Default for larger screens */
     justify-content: center;
-    gap:20px;
+    gap: 20px;
     justify-items: center;
     align-items: center;
-   
 }
 
+/* Individual Card */
 .card {
     height: 32vw;
     width: 19rem;
     border: none;
     border-radius: 8px;
     margin-bottom: 2rem;
-    padding: 10px 10px 10px 10px;
-    /* background-color: rgb(23, 122, 208); */
-    margin-bottom: 0.3rem; 
-    margin-top: 7rem; 
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Keeps the card content horizontally centered */
+    align-items: center;
     box-shadow: 10px 10px 60px #abb8c37a;
-    text-align: left; /* Aligns card details to the left */
+    text-align: left;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 10px 10px 60px #abb8c3;
 }
 
 .card img {
     height: 22vw;
     width: 18rem;
-    border: none;
     border-radius: 16px;
-    /* background-color: crimson; */
     object-fit: cover;
-    
 }
 
 .card-content {
-    width: 100%; /* Makes the content take full width of the card */
+    width: 100%;
     height: 40%;
     display: flex;
     flex-direction: column;
     line-height: 1.2rem;
     font-size: 1.2rem;
-    align-items: flex-start; /* Aligns the text content to the left */
-    /* background-color: antiquewhite; */
-    
+    align-items: flex-start;
 }
 
-.cc-h3{
-    height: 100%;
+.cc-h3 {
     width: 100%;
     padding-top: 1.2rem;
     font-size: 1.3rem;
     color: #ff6900;
-    /* background-color: aqua; */
     font-family: Spee-Bold;
 }
 
-.price{
-    height: 100%;
+.price {
     width: 100%;
     padding-top: 0.5rem;
     color: #cf2e2e;
     font-size: 1.1rem;
     padding-bottom: 1rem;
-    font-family: Spee-bold;
-    /* background-color: rgb(23, 36, 211); */
+    font-family: Spee-Bold;
 }
 
-.card-content span{
-    height: 100%;
+.card-content span {
     width: 100%;
     color: #fcb900;
     font-size: 0.9rem;
     font-family: Spee-Reg;
-    
     font-weight: 800;
-    /* background-color: rgb(102, 191, 106); */
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    #cards-box {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        grid-template-rows: auto;
+    }
+
+    .card {
+        height: 28vw;
+        width: 18rem;
+    }
+
+    .card img {
+        height: 20vw;
+    }
+}
+
+@media (max-width: 992px) {
+    #cards-box {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+
+    .card {
+        height: 26vw;
+        width: 16rem;
+    }
+
+    .card img {
+        height: 18vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #cards-box {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
+
+    .card {
+        height: auto;
+        width: 90%;
+    }
+
+    .card img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .cc-h3 {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 0.9rem;
+    }
+
+    .card-content span {
+        font-size: 0.8rem;
+    }
+}

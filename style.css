@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body,html{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* 
+#navbar{
+    height: 5rem;
+    display: flex;
+    width: 100%;
+    background-color: #fcb900;
+    position:absolute;
+    align-items: center;
+}
+#nav-items{
+    font-size: 1.5rem;
+    display: flex;
+    padding: 2rem;
+    position: relative;
+    justify-content: space-between;
+    left:55rem;
+    align-items: center;
+
+} */
+
+
+
+#cards-box {
+    width: 90%;
+    margin: 5rem auto; /* Centers the cards-box horizontally */
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.card {
+    height: 30vw;
+    width: 18rem;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    /* background-color: rgb(23, 122, 208); */
+    margin-bottom: 0.3rem; 
+    margin-top: 7rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps the card content horizontally centered */
+    text-align: left; /* Aligns card details to the left */
+}
+
+.card img {
+    height: 22vw;
+    width: 18rem;
+    border: none;
+    border-radius: 16px;
+    /* background-color: crimson; */
+    object-fit: cover;
+    
+}
+
+.card-content {
+    width: 100%; /* Makes the content take full width of the card */
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    align-items: flex-start; /* Aligns the text content to the left */
+    /* background-color: antiquewhite; */
+    
+}
+
+.cc-h3{
+    height: 100%;
+    width: 100%;
+    padding-top: 1.2rem;
+    /* background-color: aqua; */
+}
+
+.price{
+    height: 100%;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* background-color: rgb(23, 36, 211); */
+}
+
+.card-content span{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(102, 191, 106); */
+}
+

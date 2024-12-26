@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Grid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .element1 {
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: center;
+            animation: grow 2s forwards;
+            transform: translateY(100px) scale(0.5) rotateX(-30deg);
+            transition: transform 3s ease-out, opacity 3s ease-out;
+            animation-timeline: scroll();
+        }
+
+        .element2 {
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            animation: grow 2s forwards;
+            animation-delay: 1s;
+            /* Starts 1 second after element1 */
+            transform: translateY(100px) scale(0.5) rotateX(-30deg);
+            transition: transform 3s ease-out, opacity 3s ease-out;
+            animation-timeline: scroll();
+        }
+
+        .element3 {
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: center;
+            animation: grow 1s forwards;
+            animation-delay: 2s;
+            /* Starts 2 seconds after element1 */
+            transform: translateY(100px) scale(0.5) rotateX(-30deg);
+            transition: transform 3s ease-out, opacity 3s ease-out;
+            animation-timeline: scroll();
+        }
+
+        /* if adding more card in future add the same class on element with numbers and an animation delay over 1 sec extra  */
+
+        @keyframes grow {
+            0% {
+                transform: scale(0);
+                opacity: 0.1;
+            }
+
+            30% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            75% {
+                transform: scale(0.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            perspective: 1000px;
+        }
+    </style>
+</head>
+
+<body class="bg-yellow-200 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 rounded-xl m-2">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <h1 class="animate-bounce text-2xl font-bold text-gray-800">About <span class="text-blue-600">Us</span>
+                </h1>
+                <div class="space-x-6 bg-blue-200 rounded-full px-4 py-2">
+                    <a href="#" class="text-blue-900 font-bold">
+                        <i class="fas fa-arrow-left transition-all transition-duration-700 hover:rotate-180"></i>
+                        Home</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center py-12">
+        <div class="text-center mb-12 mt-4">
+            <h2 class="text-6xl font-bold text-gray-800 mb-4 font-serif">Meet Our Team</h2>
+            <p class="element1 text-gray-600 max-w-2xl mb-10 mx-auto p-8">
+                Our diverse team <br>of experts <span class="text-blue-700 font-bold">brings innovation </span> and
+                excellence to every project.
+            </p>
+        </div>
+
+        <!-- Team Member Grid -->
+        <div class="max-w-6xl grid grid-cols-1 gap-8 px-4">
+
+            <div class="element1 bg-white rounded-2xl shadow-lg max-w-sm p-4 mx-auto text-left">
+                <div class="flex items-center mb-3">
+                    <img src="https://picsum.photos/300/250" alt="Profile of John Doe"
+                        class="w-20 rounded-2xl shadow-md mr-3 transition hover:scale-105" />
+                    <div>
+                        <h3 class="text-xl mb-1 ml-1 font-bold text-gray-600">John Doe</h3>
+                        <p class="text-blue-500 text-xs ml-2 font-semibold">Software Engineer</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="px-3 pb-3 text-sm">
+                        Passionate about building scalable and efficient software solutions. Always striving to innovate
+                        and improve.
+                    </p>
+                    <div class=" mb-4">
+                        <div class="flex justify-around">
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Projects</h3>
+                                <p class="text-2xl text-center font-bold">
+                                    12<span class="text-green-700">+</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Experience</h3>
+                                <p class="text-2xl text-center font-bold">5<span
+                                        class="text-green-700 text-sm">Years</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Skills</h3>
+                                <p class="text-2xl text-center font-bold">18<span class="text-green-700">+</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 w-full text-center px-2">
+                        <a href="#portfolio"
+                            class="bg-blue-700 text-blue-200 font-bold py-2 px-4 flex-1 rounded-full hover:bg-blue-800 hover:text-blue-100 hover:scale-105 transition">
+                            Profile
+                        </a>
+                        <a href="#contact"
+                            class="bg-gray-700 text-gray-200 font-bold py-2 px-4 flex-1 rounded-full hover:bg-gray-800 hover:text-gray-100 hover:scale-105 transition">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element2 bg-white rounded-2xl shadow-lg max-w-sm p-4 mx-auto text-left">
+                <div class="flex items-center mb-3">
+                    <img src="https://picsum.photos/300/250" alt="Profile of Jane Doe"
+                        class="w-20 rounded-2xl shadow-md mr-3 transition hover:scale-105" />
+                    <div>
+                        <h3 class="text-xl mb-1 ml-1 font-bold text-gray-600">Jane Doe</h3>
+                        <p class="text-blue-500 text-xs ml-2 font-semibold">Data Analyst</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="px-3 pb-3 text-sm">
+                        Skilled in data analysis and visualization. Proficient in a range of data tools and
+                        technologies.
+                    </p>
+                    <div class=" mb-4">
+                        <div class="flex justify-around">
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Projects</h3>
+                                <p class="text-2xl text-center font-bold">
+                                    8<span class="text-green-700">+</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Experience</h3>
+                                <p class="text-2xl text-center font-bold">3<span
+                                        class="text-green-700 text-sm">Years</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Skills</h3>
+                                <p class="text-2xl text-center font-bold">12<span class="text-green-700">+</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 w-full text-center px-2">
+                        <a href="#portfolio"
+                            class="bg-blue-700 text-blue-200 font-bold py-2 px-4 flex-1 rounded-full hover:bg-blue-800 hover:text-blue-100 hover:scale-105 transition">
+                            Profile
+                        </a>
+                        <a href="#contact"
+                            class="bg-gray-700 text-gray-200 font-bold py-2 px-4 flex-1 rounded-full hover:bg-gray-800 hover:text-gray-100 hover:scale-105 transition">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element3 bg-white rounded-2xl shadow-lg max-w-sm p-4 mx-auto text-left">
+                <div class="flex items-center mb-3">
+                    <img src="https://picsum.photos/300/250" alt="Profile of Bob Smith"
+                        class="w-20 rounded-2xl shadow-md mr-3 transition hover:scale-105" />
+                    <div>
+                        <h3 class="text-xl mb-1 ml-1 font-bold text-gray-600">Bob Smith</h3>
+                        <p class="text-blue-500 text-xs ml-2 font-semibold">DevOps Engineer</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="px-3 pb-3 text-sm">
+                        Experienced in designing and implementing scalable and efficient infrastructure solutions.
+                    </p>
+                    <div class=" mb-4">
+                        <div class="flex justify-around">
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Projects</h3>
+                                <p class="text-2xl text-center font-bold">
+                                    15<span class="text-green-700">+</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Experience</h3>
+                                <p class="text-2xl text-center font-bold">6<span
+                                        class="text-green-700 text-sm">Years</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-gray-400 font-semibold text-xs">Skills</h3>
+                                <p class="text-2xl text-center font-bold">20<span class="text-green-700">+</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 w-full text-center px-2">
+                        <a href="#portfolio"
+                            class="bg-blue-700 text-blue-200 font-bold py-2 px-4 flex-1 rounded-full hover:bg-blue-800 hover:text-blue-100 hover:scale-105 transition">
+                            Profile
+                        </a>
+                        <a href="#contact"
+                            class="bg-gray-700 text-gray-200 font-bold py-2 px-4 flex-1 rounded-full hover:bg-gray-800 hover:text-gray-100 hover:scale-105 transition">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-8 rounded-tl-2xl rounded-tr-2xl">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-4">Our TechTeam</h3>
+                    <p class="text-sm">Building the future together</p>
+                </div>
+                <div class="bg-blue-200 text-blue-900 rounded-2xl p-4">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-link"></i>
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-4">
+                        <li><a href="#"
+                                class="block transition-all hover:text-white hover:bg-blue-700 hover:rounded-full hover:px-10 hover:py-2">
+                                About Us
+                            </a></li>
+                        <li><a href="#"
+                                class="block transition-all hover:text-white hover:bg-blue-700 hover:rounded-full hover:px-10 hover:py-2">
+                                Our Services
+                            </a></li>
+                        <li><a href="#"
+                                class="block transition-all hover:text-white hover:bg-blue-700 hover:rounded-full hover:px-10 hover:py-2">
+                                Contact
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="bg-blue-200 text-blue-900 rounded-2xl p-4">
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#"
+                                class="block transition-all hover:text-white hover:bg-blue-500 hover:rounded-full hover:px-10 hover:py-3">
+                                <i class="fab fa-linkedin mr-3"></i>
+                                LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block transition-all hover:text-white hover:bg-blue-600 hover:rounded-full hover:px-10 hover:py-3">
+                                <i class="fab fa-twitter mr-3"></i>
+                                Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block transition-all hover:text-white hover:bg-gray-700 hover:rounded-full hover:px-10 hover:py-3">
+                                <i class="fab fa-github mr-3"></i>
+                                GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6 text-center">
+                <p>© 2024 Restaur. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
